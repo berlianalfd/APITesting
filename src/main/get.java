@@ -1,0 +1,1 @@
+// ini file method get
