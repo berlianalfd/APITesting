@@ -1,8 +1,0 @@
--------------------------------------------------------------------------------
-Test set: API.GetUser
--------------------------------------------------------------------------------
-Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.722 s <<< FAILURE! - in API.GetUser
-tc6GetUserDataWithInvalidUserId(API.GetUser)  Time elapsed: 0.373 s  <<< FAILURE!
-java.lang.AssertionError: Expected status code 404 Not Found expected:<404> but was:<400>
-	at API.GetUser.tc6GetUserDataWithInvalidUserId(GetUser.java:105)
-
