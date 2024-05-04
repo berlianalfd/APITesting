@@ -23,7 +23,7 @@ Postman harus terinstall di komputer pengguna.
 - Library automation testing : Rest Assured
 - Bahasa pemrograman : Java
 
-  ## Struktur File Program 
+## Struktur File Program 
 Berikut merupakan struktur file dari scripting test yang kami buat
 
 ## Test the program
@@ -60,6 +60,19 @@ Berikut merupakan perintah yang dapat di gunakan untuk melakukan automation test
      ```sh
      mvn -Dtest=DeleteUserTest test
      ```
-     
+
+## Generate report by tools
+
+Berikut merupakan generate report yang dilakukan dengan menggunakan **Plugin Surefire Report** dalam Maven. Dimana, plugin tersebut dapat digunakan untuk menghasilkan laporan hasil eksekusi tes unit Anda dalam format HTML 
+
+1. Berikut merupakan perintah untuk generate report menggunakan maven
+
+   ```sh
+   mvn surefire-report:report 
+   ```
+2. Sehingga hasil dari generate report tersebut akan membuat folder site didalam folder target
+
+3. Untuk melihat hasilnya buka file surefire-report.html pada browser
+
      
 
