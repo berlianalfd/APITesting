@@ -12,3 +12,54 @@ Implementasi pengujian API menggunakan tools seperti Postman dan Rest Assured. A
 ## Prerequisites
 
 Postman harus terinstall di komputer pengguna.
+
+## Testing Tools
+
+- IDE : visual studio code
+- Alat build otomatis : Apache Maven
+- Tools buat runing : Terminal
+- Sistem operasi : Window
+- Framework testing : JUnit
+- Library automation testing : Rest Assured
+- Bahasa pemrograman : Java
+
+  ## Struktur File Program 
+Berikut merupakan struktur file dari scripting test yang kami buat
+
+## Test the program
+
+Berikut merupakan perintah yang dapat di gunakan untuk melakukan automation testing pada terminal.
+1. Perintah dibawah digunakan untuk menguji semua class sekaligus
+
+   ```sh
+   mvn test
+   ```
+
+2. Perintah dibawah digunakan untuk menguji semua method test yang terdapat pada satu class test secara sekaligus.
+
+    - Perintah untuk menguji semua method test pada **class CreateUserTest**
+
+     ```sh
+     mvn -Dtest=CreateUserTest test
+     ```
+     
+    - Perintah untuk menguji semua method test pada **class GetUserTest**
+
+     ```sh
+     mvn -Dtest=GetUserTest test
+     ```
+
+    - Perintah untuk menguji semua method test pada **class UpdateUserTest**
+
+     ```sh
+     mvn -Dtest=UpdateUserTest test
+     ```
+
+    - Perintah untuk menguji semua method test pada **class DeleteUserTest**
+
+     ```sh
+     mvn -Dtest=DeleteUserTest test
+     ```
+     
+     
+
