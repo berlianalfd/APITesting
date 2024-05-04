@@ -10,17 +10,12 @@ public class GetUserTest {
     public void tc1GetUserDataWithoutAppIdAndValidUserId() {
         String baseUrl = "https://dummyapi.io/data/v1/";
         String endpoint = "/user/60d0fe4f5311236168a109dd"; // id user terdaftar
+
         Response response = RestAssured.given()
                 .baseUri(baseUrl)
                 .get(endpoint);
         int statusCode = response.getStatusCode();
-        try {
-            assertEquals("Expected status code 403 Forbidden", 403, statusCode);
-        } catch (AssertionError e) {
-            System.out.println("Actual status code: " + statusCode);
-            System.out.println("Response body: " + response.getBody().asString());
-            throw e;
-        }
+        assertEquals("Expected status code 403 Forbidden", 403, statusCode);
         String responseBody = response.getBody().asString();
         assertEquals("Expected error message", "{\"error\":\"APP_ID_MISSING\"}", responseBody);
     }
@@ -29,17 +24,12 @@ public class GetUserTest {
     public void tc2GetUserDataWithoutAppIdAndInvalidUserId() {
         String baseUrl = "https://dummyapi.io/data/v1/";
         String endpoint = "/user/60d0fe4f5311236168a109KK"; // id user tidak terdaftar
+
         Response response = RestAssured.given()
                 .baseUri(baseUrl)
                 .get(endpoint);
         int statusCode = response.getStatusCode();
-        try {
-            assertEquals("Expected status code 403 Forbidden", 403, statusCode);
-        } catch (AssertionError e) {
-            System.out.println("Actual status code: " + statusCode);
-            System.out.println("Response body: " + response.getBody().asString());
-            throw e;
-        }
+        assertEquals("Expected status code 403 Forbidden", 403, statusCode);
         String responseBody = response.getBody().asString();
         assertEquals("Expected error message", "{\"error\":\"APP_ID_MISSING\"}", responseBody);
     }
@@ -48,19 +38,14 @@ public class GetUserTest {
     public void tc3GetUserDataWithInvalidAppId() {
         String baseUrl = "https://dummyapi.io/data/v1/";
         String endpoint = "/user/60d0fe4f5311236168a109dd"; // id user terdaftar
-        String invalidAppId = "662e2bdcbb70a769232593d7"; // app-id yang salah
+        String appId = "662e2bdcbb70a769232593d7"; // app-id yang salah
+
         Response response = RestAssured.given()
                 .baseUri(baseUrl)
-                .header("app-id", invalidAppId)
+                .header("app-id", appId)
                 .get(endpoint);
         int statusCode = response.getStatusCode();
-        try {
-            assertEquals("Expected status code 403 Forbidden", 403, statusCode);
-        } catch (AssertionError e) {
-            System.out.println("Actual status code: " + statusCode);
-            System.out.println("Response body: " + response.getBody().asString());
-            throw e;
-        }
+        assertEquals("Expected status code 403 Forbidden", 403, statusCode);
         String responseBody = response.getBody().asString();
         assertEquals("Expected error message", "{\"error\":\"APP_ID_NOT_EXIST\"}", responseBody);
     }
@@ -70,18 +55,13 @@ public class GetUserTest {
         String baseUrl = "https://dummyapi.io/data/v1/";
         String endpoint = "/user/60d0fe4f5311236168a109KK"; // id user tidak terdaftar
         String appId = "662e2bdcbb70a769232593d7"; //app-id yang salah
+    
         Response response = RestAssured.given()
                 .baseUri(baseUrl)
                 .header("app-id", appId)
                 .get(endpoint);
         int statusCode = response.getStatusCode();
-        try {
-            assertEquals("Expected status code 403 Forbidden", 403, statusCode);
-        } catch (AssertionError e) {
-            System.out.println("Actual status code: " + statusCode);
-            System.out.println("Response body: " + response.getBody().asString());
-            throw e;
-        }
+        assertEquals("Expected status code 403 Forbidden", 403, statusCode);
         String responseBody = response.getBody().asString();
         assertEquals("Expected error message", "{\"error\":\"APP_ID_NOT_EXIST\"}", responseBody);
     }
@@ -91,18 +71,14 @@ public class GetUserTest {
         String baseUrl = "https://dummyapi.io/data/v1/";
         String endpoint = "/user/60d0fe4f5311236168a109KK"; // id user tidak terdaftar
         String appId = "662e2bdcbb70a769232593d6"; //app-id yang valid
+
+        
         Response response = RestAssured.given()
                 .baseUri(baseUrl)
                 .header("app-id", appId)
                 .get(endpoint);
         int statusCode = response.getStatusCode();
-        try {
-            assertEquals("Expected status code 404 Not Found", 404, statusCode);
-        } catch (AssertionError e) {
-            System.out.println("Actual status code: " + statusCode);
-            System.out.println("Response body: " + response.getBody().asString());
-            throw e;
-        }
+        assertEquals("Expected status code 404 Not Found", 404, statusCode);
         String responseBody = response.getBody().asString();
         assertEquals("Expected error message", "{\"error\":\"RESOURCE_NOT_FOUND\"}", responseBody);
     }
