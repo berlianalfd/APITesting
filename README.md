@@ -71,6 +71,9 @@ Berikut merupakan generate report yang dilakukan dengan menggunakan **Plugin Sur
    mvn surefire-report:report 
    ```
 2. Sehingga hasil dari generate report tersebut akan membuat folder site didalam folder target
+   
+    <img width="275" alt="foldersite" src="https://github.com/berlianalfd/APITesting/assets/95121218/4c1b030b-a394-4fd5-9265-23ed19d8ad4d">
+
 
 3. Untuk melihat hasilnya buka file surefire-report.html pada browser
 
