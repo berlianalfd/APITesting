@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: API.UpdateUserTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 5.995 s <<< FAILURE! - in API.UpdateUserTest
+UpdateSomeUserDataWithAppIdRegistered(API.UpdateUserTest)  Time elapsed: 3.491 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <200>.
+
+	at API.UpdateUserTest.UpdateSomeUserDataWithAppIdRegistered(UpdateUserTest.java:65)
+
+UpdateAllUserDataWithAppIdRegistered(API.UpdateUserTest)  Time elapsed: 0.92 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <200>.
+
+	at API.UpdateUserTest.UpdateAllUserDataWithAppIdRegistered(UpdateUserTest.java:44)
+
