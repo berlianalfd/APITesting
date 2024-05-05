@@ -39,14 +39,17 @@ Berikut merupakan struktur file dari scripting test yang kami buat
 
      Merupakan file yang berisi kelas Java yang digunakan untuk menguji fungsionalitas create data user pada dummyapi.io. Di dalamnya terdapat script pengujian untuk 
      menguji 5 test case.
+
    - **UpdateUserTest.Java**
 
      Merupakan file yang berisi kelas Java yang digunakan untuk menguji fungsionalitas update data user pada dummyapi.io. Di dalamnya terdapat script pengujian untuk 
      menguji 5 test case.
+     
    - **GetUserTest.Java**
 
      Merupakan file yang berisi kelas Java yang digunakan untuk menguji fungsionalitas get data user pada dummyapi.io. Di dalamnya terdapat script pengujian untuk menguji 5 
      test case.
+     
    - **DeletUserTest.Java**
 
      Merupakan file yang berisi kelas Java yang digunakan untuk menguji fungsionalitas delete data user pada dummyapi.io. Di dalamnya terdapat script pengujian untuk 
@@ -98,6 +101,60 @@ Berikut merupakan perintah yang dapat di gunakan untuk melakukan automation test
      ```sh
      mvn -Dtest=DeleteUserTest test
      ```
+     
+3. Perintah dibawah digunakan untuk menguji satu method test **spesifik** dari satu class test.
+   
+   - Berikut merupakan perintah untuk menguji method test spesifik yang terdapat pada class **CreateUserTest**
+
+     ```sh
+     mvn -Dtest=CreateUserTest#<Nama_Method_Test> test
+     ```
+     
+     **Contohnya**
+     
+     Berikut merupakan perintah untuk menguji angka kurang dari range, yaitu **method testCreateUserMenggunakanEmailTerdaftar** 
+     ```sh
+     mvn -Dtest=CreateUserTest#testCreateUserMenggunakanEmailTerdaftar test
+     ```
+
+   - Berikut merupakan perintah untuk menguji method test spesifik yang terdapat pada class **DeleteUserTest**
+
+     ```sh
+     mvn -Dtest=DeleteUserTest#<Nama_Method_Test> test
+     ```
+     
+     **Contohnya**
+     
+     Berikut merupakan perintah untuk menguji angka kurang dari range, yaitu **method tc3DeleteUserWithValidUserIdAndInvalidAppId** 
+     ```sh
+     mvn -Dtest=DeleteUserTest#tc3DeleteUserWithValidUserIdAndInvalidAppId test
+     ```
+
+   - Berikut merupakan perintah untuk menguji method test spesifik yang terdapat pada class **GetUserTest**
+
+     ```sh
+     mvn -Dtest=GetUserTest#<Nama_Method_Test> test
+     ```
+     
+      **Contohnya**
+     
+     Berikut merupakan perintah untuk menguji angka kurang dari range, yaitu **method tc1GetUserDataWithoutAppIdAndValidUserId** 
+     ```sh
+     mvn -Dtest=GetUserTest#tc1GetUserDataWithoutAppIdAndValidUserId test
+     ```
+     
+   - Berikut merupakan perintah untuk menguji method test spesifik yang terdapat pada class **UpdateUserTest**
+
+     ```sh
+     mvn -Dtest=UpdateUserTest#<Nama_Method_Test> test
+     ```
+     
+      **Contohnya**
+     
+     Berikut merupakan perintah untuk menguji angka kurang dari range, yaitu **method UpdateSomeUserDataWithoutEmailDataWithRegisteredAppId** 
+     ```sh
+     mvn -Dtest=UpdateUserTest#UpdateSomeUserDataWithoutEmailDataWithRegisteredAppId test
+     ```
 
 ## Generate report by tools
 
@@ -110,25 +167,26 @@ Berikut merupakan generate report yang dilakukan dengan menggunakan **Plugin Sur
    ```
 2. Sehingga hasil dari generate report tersebut akan membuat folder site didalam folder target
    
-    <img width="275" alt="foldersite" src="https://github.com/berlianalfd/APITesting/assets/95121218/4c1b030b-a394-4fd5-9265-23ed19d8ad4d">
+   <img width="275" alt="foldersite" src="https://github.com/berlianalfd/APITesting/assets/95121218/4c1b030b-a394-4fd5-9265-23ed19d8ad4d">
 
 
 3. Untuk melihat hasilnya buka file surefire-report.html pada browser
 
-<img width="700" alt="contoh tampilan aplikasi" src="https://github.com/berlianalfd/APITesting/assets/97377702/fb2c9ce8-2a1c-4865-9168-324f23ef08fd">
+   <img width="700" alt="contoh tampilan aplikasi" src="https://github.com/berlianalfd/APITesting/assets/97377702/fb2c9ce8-2a1c-4865-9168-324f23ef08fd">
 
-**Penjelasan**
+   **Penjelasan**
+   
+   - **Summary** berisikan jumlah dari seluruh test, error, failure, skipped, success rate dan time
      
-- **Summary** berisikan jumlah dari seluruh test, error, failure, skipped, success rate dan time
      <img width="700" alt="summary" src="https://github.com/berlianalfd/APITesting/assets/97377702/14cc0ba3-23e3-4ffb-bb3c-9152d821fd36)">
      
    - **Package List** berisikan list dari package serta list dari file test yang terdapat pada package tersebut. Kelompok kami membuat 4 file test pada package API yaitu CreateUserTest, UpdateUserTest, GetUserTest dan DeleteUserTest. Pada masing - masing file test terdapat jumlah dari seluruh test, error, failure, skipped, success rate dan time
-  
+     
      <img width="700" alt="packagelist" src="https://github.com/berlianalfd/APITesting/assets/97377702/f08256da-941c-47e9-ab69-728c08419d38">
 
         - File yang tidak memiliki kesalahan dari hasil test akan ditandai dengan icon  ![icon_success_sml](https://github.com/berlianalfd/JavaCalcApp/assets/143075674/35de3318-03aa-4f47-b138-c1878a6fbde6)
         
-      - File yang memiliki kesalahan dari hasil test akan ditandai dengan icon  ![icon_warning_sml](https://github.com/berlianalfd/JavaCalcApp/assets/143075674/0c638baa-b3d8-4631-935a-016860d10987)
+        - File yang memiliki kesalahan dari hasil test akan ditandai dengan icon  ![icon_warning_sml](https://github.com/berlianalfd/JavaCalcApp/assets/143075674/0c638baa-b3d8-4631-935a-016860d10987)
       
    - **Test Cases** berisikan list dari selurh test yang dilakukan pada setiap file test
      
