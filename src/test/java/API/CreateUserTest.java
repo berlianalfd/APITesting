@@ -47,7 +47,7 @@ public class CreateUserTest {
                                 "  \"firstName\": \"Zizah\",\n" +
                                 "  \"lastName\": \"Natania\",\n" +
                                 "  \"gender\": \"female\",\n" +
-                                "  \"email\": \"zaazisi@example.com\",\n" +
+                                "  \"email\": \"zaazisii@example.com\",\n" +
                                 "  \"dateOfBirth\": \"1988-05-15T00:00:00.000Z\",\n" +
                                 "  \"phone\": \"081234576543\",\n" +
                                 "  \"picture\": \"https://example.com/zizah.jpg\",\n" +
@@ -76,7 +76,7 @@ public class CreateUserTest {
             .body("firstName", Matchers.equalTo("Zizah"))
             .body("lastName", Matchers.equalTo("Natania"))
             .body("gender", Matchers.equalTo("female"))
-            .body("email", Matchers.equalTo("zaazisi@example.com"))
+            .body("email", Matchers.equalTo("zaazisii@example.com"))
             .body("dateOfBirth", Matchers.equalTo("1988-05-15T00:00:00.000Z"))
             .body("phone", Matchers.equalTo("081234576543"))
             .body("picture", Matchers.equalTo("https://example.com/zizah.jpg"))
@@ -167,7 +167,7 @@ public class CreateUserTest {
                                 "  \"firstName\": \"Cintia\",\n" +
                                 "  \"lastName\": \"Ningsih\",\n" +
                                 "  \"gender\": \"female\",\n" +
-                                "  \"email\": \"CintiaNsh@example.com\",\n" +
+                                "  \"email\": \"CintiaNshh@example.com\",\n" +
                                 "  \"dateOfBirth\": \"2003-01-20T00:00:00.000Z\",\n" +
                                 "  \"phone\": \"081234575000\",\n" +
                                 "  \"picture\": \"https://example.com/zizah.jpg\",\n" +
