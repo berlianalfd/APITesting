@@ -186,7 +186,7 @@ Berikut merupakan generate report yang dilakukan dengan menggunakan **Plugin Sur
       
    - **Test Cases** berisikan list dari selurh test yang dilakukan pada setiap file test
      
-     <img width="900" alt="testcases" src="https://github.com/berlianalfd/APITesting/assets/97377702/d92504a1-80b5-4a15-b9f9-e60fb0a54144">
+     <img width="700" alt="testcases" src="https://github.com/berlianalfd/APITesting/assets/97377702/d92504a1-80b5-4a15-b9f9-e60fb0a54144">
 
        - Test dengan status **PASS** akan ditandai dengan icon  ![icon_success_sml](https://github.com/berlianalfd/JavaCalcApp/assets/143075674/35de3318-03aa-4f47-b138-c1878a6fbde6)
       
