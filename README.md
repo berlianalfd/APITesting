@@ -26,6 +26,33 @@ Postman harus terinstall di komputer pengguna.
 ## Struktur File Program 
 Berikut merupakan struktur file dari scripting test yang kami buat
 
+<img width="300" alt="contoh tampilan aplikasi" src="https://github.com/berlianalfd/APITesting/assets/97377702/ab51d889-7154-4882-a9bf-8665dcc83fc7">
+
+1. **main**
+   
+   Folder main pada struktur program, biasanya digunakan untuk menyimpan semua file Java yang berisi sumber kode utama. Pada pengujian kali ini, folder main tidak diperlukan, namun foldernya akan tetap ada.
+   
+2. **test/java/API**
+
+   Folder ini terdiri dari file test yang berisi script API testing dengan Rest Assured untuk request CREATE, UPDATE, DELETE, dan GET
+   - **CreateUserTest.Java** Merupakan file yang berisi kelas Java yang digunakan untuk menguji fungsionalitas create data user pada dummyapi.io. Di dalamnya terdapat script pengujian untuk menguji 5 test case.
+   - **UpdateUserTest.Java** Merupakan file yang berisi kelas Java yang digunakan untuk menguji fungsionalitas update data user pada dummyapi.io. Di dalamnya terdapat script pengujian untuk menguji 5 test case.
+   - **GetUserTest.Java** Merupakan file yang berisi kelas Java yang digunakan untuk menguji fungsionalitas get data user pada dummyapi.io. Di dalamnya terdapat script pengujian untuk menguji 5 test case.
+   - **DeletUserTest.Java** Merupakan file yang berisi kelas Java yang digunakan untuk menguji fungsionalitas delete data user pada dummyapi.io. Di dalamnya terdapat script pengujian untuk menguji 5 test case.
+   - 
+
+3. **target**
+
+   Folder ini digunakan oleh sistem build Java untuk menyimpan file class yang dikompilasi dan artefak lain yang dihasilkan atau dibuat secara otomatis selama proses build.
+   
+4. **pom.xml**
+   
+    File ini adalah project object model (POM) untuk project Java Kami. Ini menentukan dependensi project pada library dan framework lain, serta pengaturan                 konfigurasi untuk proses build.
+   
+5. **README.md**
+   
+   File panduan ini berisi panduan singkat tentang program API Testing. File ini ditujukkan untuk memberikan informasi kepada pengguna atau kontributor potensial, tentang apa isi dari program APITesting, cara running test, dan bagaimana berkontribusi.
+
 ## Test the program
 
 Berikut merupakan perintah yang dapat di gunakan untuk melakukan automation testing pada terminal.
