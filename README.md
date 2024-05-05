@@ -9,10 +9,6 @@ Implementasi pengujian API menggunakan tools seperti Postman dan Rest Assured. A
 - 211524005 | Cintia Ningsih [@cintianingsih](https://github.com/cintianingsih)
 - 211524029 | Yane Pradita [@yanepradita](https://github.com/yanepradita)
 
-## Prerequisites
-
-Postman harus terinstall di komputer pengguna.
-
 ## Testing Tools
 
 - IDE : visual studio code
@@ -34,7 +30,7 @@ Berikut merupakan struktur file dari scripting test yang kami buat
    
 2. **test/java/API**
 
-   Folder ini terdiri dari file test yang berisi script API testing dengan Rest Assured untuk request CREATE, UPDATE, DELETE, dan GET
+   Folder ini terdiri dari file test yang berisi script API testing dengan menggunakan library Rest Assured untuk request CREATE, UPDATE, DELETE, dan GET
    - **CreateUserTest.Java**
 
      Merupakan file yang berisi kelas Java yang digunakan untuk menguji fungsionalitas create data user pada dummyapi.io. Di dalamnya terdapat script pengujian untuk 
