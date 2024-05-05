@@ -46,7 +46,7 @@ Berikut merupakan struktur file dari scripting test yang kami buat
      Merupakan file yang berisi kelas Java yang digunakan untuk menguji fungsionalitas get data user pada dummyapi.io. Di dalamnya terdapat script pengujian untuk menguji 5 
      test case.
      
-   - **DeletUserTest.Java**
+   - **DeleteUserTest.Java**
 
      Merupakan file yang berisi kelas Java yang digunakan untuk menguji fungsionalitas delete data user pada dummyapi.io. Di dalamnya terdapat script pengujian untuk 
      menguji 5 test case.
