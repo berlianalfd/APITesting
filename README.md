@@ -35,11 +35,22 @@ Berikut merupakan struktur file dari scripting test yang kami buat
 2. **test/java/API**
 
    Folder ini terdiri dari file test yang berisi script API testing dengan Rest Assured untuk request CREATE, UPDATE, DELETE, dan GET
-   - **CreateUserTest.Java** Merupakan file yang berisi kelas Java yang digunakan untuk menguji fungsionalitas create data user pada dummyapi.io. Di dalamnya terdapat script pengujian untuk menguji 5 test case.
-   - **UpdateUserTest.Java** Merupakan file yang berisi kelas Java yang digunakan untuk menguji fungsionalitas update data user pada dummyapi.io. Di dalamnya terdapat script pengujian untuk menguji 5 test case.
-   - **GetUserTest.Java** Merupakan file yang berisi kelas Java yang digunakan untuk menguji fungsionalitas get data user pada dummyapi.io. Di dalamnya terdapat script pengujian untuk menguji 5 test case.
-   - **DeletUserTest.Java** Merupakan file yang berisi kelas Java yang digunakan untuk menguji fungsionalitas delete data user pada dummyapi.io. Di dalamnya terdapat script pengujian untuk menguji 5 test case.
-   - 
+   - **CreateUserTest.Java**
+
+     Merupakan file yang berisi kelas Java yang digunakan untuk menguji fungsionalitas create data user pada dummyapi.io. Di dalamnya terdapat script pengujian untuk 
+     menguji 5 test case.
+   - **UpdateUserTest.Java**
+
+     Merupakan file yang berisi kelas Java yang digunakan untuk menguji fungsionalitas update data user pada dummyapi.io. Di dalamnya terdapat script pengujian untuk 
+     menguji 5 test case.
+   - **GetUserTest.Java**
+
+     Merupakan file yang berisi kelas Java yang digunakan untuk menguji fungsionalitas get data user pada dummyapi.io. Di dalamnya terdapat script pengujian untuk menguji 5 
+     test case.
+   - **DeletUserTest.Java**
+
+     Merupakan file yang berisi kelas Java yang digunakan untuk menguji fungsionalitas delete data user pada dummyapi.io. Di dalamnya terdapat script pengujian untuk 
+     menguji 5 test case.
 
 3. **target**
 
@@ -104,5 +115,38 @@ Berikut merupakan generate report yang dilakukan dengan menggunakan **Plugin Sur
 
 3. Untuk melihat hasilnya buka file surefire-report.html pada browser
 
-     
+<img width="700" alt="contoh tampilan aplikasi" src="https://github.com/berlianalfd/APITesting/assets/97377702/fb2c9ce8-2a1c-4865-9168-324f23ef08fd">
 
+**Penjelasan**
+     
+- **Summary** berisikan jumlah dari seluruh test, error, failure, skipped, success rate dan time
+     <img width="700" alt="summary" src="https://github.com/berlianalfd/APITesting/assets/97377702/14cc0ba3-23e3-4ffb-bb3c-9152d821fd36)">
+     
+   - **Package List** berisikan list dari package serta list dari file test yang terdapat pada package tersebut. Kelompok kami membuat 4 file test pada package API yaitu CreateUserTest, UpdateUserTest, GetUserTest dan DeleteUserTest. Pada masing - masing file test terdapat jumlah dari seluruh test, error, failure, skipped, success rate dan time
+  
+     <img width="700" alt="packagelist" src="https://github.com/berlianalfd/APITesting/assets/97377702/f08256da-941c-47e9-ab69-728c08419d38">
+
+        - File yang tidak memiliki kesalahan dari hasil test akan ditandai dengan icon  ![icon_success_sml](https://github.com/berlianalfd/JavaCalcApp/assets/143075674/35de3318-03aa-4f47-b138-c1878a6fbde6)
+        
+      - File yang memiliki kesalahan dari hasil test akan ditandai dengan icon  ![icon_warning_sml](https://github.com/berlianalfd/JavaCalcApp/assets/143075674/0c638baa-b3d8-4631-935a-016860d10987)
+      
+   - **Test Cases** berisikan list dari selurh test yang dilakukan pada setiap file test
+     
+     <img width="900" alt="testcases" src="https://github.com/berlianalfd/APITesting/assets/97377702/d92504a1-80b5-4a15-b9f9-e60fb0a54144">
+
+       - Test dengan status **PASS** akan ditandai dengan icon  ![icon_success_sml](https://github.com/berlianalfd/JavaCalcApp/assets/143075674/35de3318-03aa-4f47-b138-c1878a6fbde6)
+      
+      - Test dengan status **FAIL** akan ditandai dengan icon  ![icon_error_sml](https://github.com/berlianalfd/JavaCalcApp/assets/143075674/74827540-a631-4957-8688-bba7b94b37df)
+      
+   - Test dengan status **FAIL** akan ditunjukkan dengan menampilkan kesalahan apa yang terjadi yaitu menampilkan expected nya bagaimana apa dan actual nya bagaimana.
+  
+     <img width="700" alt="tcfail" src="https://github.com/berlianalfd/APITesting/assets/97377702/d9e7baa6-f5ee-4df0-b324-b213d07448bc">
+      
+     Untuk mendapatkan infomasi lebih detail mengenai kesalahan yang sedang terjadi, dapat dilihat pada bagian **Failure Details**
+
+     <img width="700" alt="detail error" src="https://github.com/berlianalfd/APITesting/assets/97377702/a4981196-6fb5-4339-8be5-61e9d5222ea9">
+
+
+
+## Referensi      
+https://maven.apache.org/surefire/maven-surefire-report-plugin/usage.html       
